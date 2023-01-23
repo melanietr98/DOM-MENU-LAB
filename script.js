@@ -1,4 +1,3 @@
-// Menu data structure
 var menuLinks = [
   {text: 'about', href: '/about'},
   {text: 'catalog', href: '/catalog'},
@@ -6,40 +5,35 @@ var menuLinks = [
   {text: 'account', href: '/account'},
 ];
 
-// task 1.1
+// Task 1.0
 let mainEl = document.querySelector('main')
 
-
+// Task 1.1
 mainEl.style.backgroundColor = 'var(--main-bg)'
 
-//task 1.2
+// Task 1.2
 mainEl.innerHTML = '<h1>SEI Rocks!</h1>'
 
-//task 1.3
+// Task 1.3
 mainEl.classList.add('flex-ctr')
 
-//task 2.0
+// Task 2.0
 let topMenuEl = document.querySelector('#top-menu')
 
-//task 2.1
+// Task 2.1
 topMenuEl.style.height = "100%"
 
-//task 2.2
-topMenuEl.style.backgroundColor = 'var(--top-menu-bg)'
-
-//task 2.3
+// Task 2.2
 topMenuEl.classList.add('flex-around')
 
+// Task 2.3
+topMenuEl.style.backgroundColor = 'var(--top-menu-bg)'
 
-
-console.log(menuLinks)
+// Task 3.1
 for(let i = 0; i < menuLinks.length; i++){
-    // console.log(menuLinks[i].text)
     let link = menuLinks[i]
     let a = document.createElement("a")
-    // topMenuEl.innerHTML += link.text
     a.setAttribute("href", link.href)
     a.innerHTML = link.text
     topMenuEl.appendChild(a)
 }
-console.log(topMenuEl)
